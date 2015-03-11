@@ -10,7 +10,7 @@ import java.io.IOException;
 public class MainOO {
 
 	public static void main(String[] args) throws IOException {
-		final Elemento[][] disposicaoInicial1 = {
+		/*final Elemento[][] disposicaoInicial1 = {
 				{GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, AGUA, AGUA, AGUA, AGUA},
 				{GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, AGUA, AGUA, AGUA, AGUA, AGUA},
 				{GRAMA, GRAMA, GRAMA, MACA, GRAMA, GRAMA, GRAMA, GRAMA, AGUA, AGUA, AGUA, AGUA, GRAMA, GRAMA, GRAMA},
@@ -23,7 +23,7 @@ public class MainOO {
 				{GRAMA, PERSONAGEM, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA, GRAMA},
 		};
 
-		TelaInicialOO tela1 = new TelaInicialOO(disposicaoInicial1);
+		TelaInicialOO tela1 = new TelaInicialOO(disposicaoInicial1);*/
 
 
 		final Elemento[][] disposicaoInicial2 = {
@@ -34,6 +34,7 @@ public class MainOO {
 		};
 
 		TelaInicialOO tela2 = new TelaInicialOO(disposicaoInicial2);
+		
 	}
 
 }

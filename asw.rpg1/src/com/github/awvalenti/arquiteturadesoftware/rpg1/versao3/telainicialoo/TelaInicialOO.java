@@ -1,5 +1,8 @@
 package com.github.awvalenti.arquiteturadesoftware.rpg1.versao3.telainicialoo;
 
+import static com.github.awvalenti.arquiteturadesoftware.rpg1.versao3.telainicialoo.MainOO.*;
+
+import java.awt.Frame;
 import java.awt.GridLayout;
 import java.io.IOException;
 
@@ -8,15 +11,21 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import com.github.awvalenti.arquiteturadesoftware.rpg1.versao1.procedimental.Main;
+
 public class TelaInicialOO {
+
+private final JFrame frame;
+private int numeroLinhas;
+private int numeroColunas;
 
 	public TelaInicialOO(Elemento[][] disposicaoInicial) throws IOException {
 
-		final JFrame frame = new JFrame();
+		frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		int numeroLinhas = disposicaoInicial.length;
-		int numeroColunas = disposicaoInicial[0].length;
+		numeroLinhas = disposicaoInicial.length;
+		numeroColunas = disposicaoInicial[0].length;
 
 		frame.setLayout(new GridLayout(numeroLinhas, numeroColunas));
 
@@ -29,11 +38,12 @@ public class TelaInicialOO {
 
 		frame.pack();
 		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
+		frame.setVisible(true);		
 	}
 
-	public void alterarElemento(int linha, int coluna, Elemento novoElemento) {
-		// ??
+	public void alterarElemento(int linha, int coluna, Elemento novoElemento) throws IOException {	
+		((JLabel) frame.getContentPane().getComponent(linha * numeroColunas + coluna)).setIcon(new ImageIcon(ImageIO.read(TelaInicialOO.class.
+				getResourceAsStream(novoElemento.getCaminhoImagem()))));
 	}
 
 }
